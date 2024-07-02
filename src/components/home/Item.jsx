@@ -17,7 +17,7 @@ function Item({
 }) {
   return (
     <div
-      className={`${roboto.className} flex w-full flex-col text-xs sm:w-[30%]`}
+      className={`${roboto.className} flex w-full flex-col text-sm sm:w-[30%] lg:text-base`}
     >
       <div className="relative mb-3 aspect-square w-full">
         <Image

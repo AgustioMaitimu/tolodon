@@ -37,7 +37,7 @@ export default function Home() {
     <main className="flex w-full max-w-[1280px] flex-col items-center px-7">
       <Hero />
       <div
-        className={`${roboto.className} mt-14 flex w-full flex-col justify-between gap-14 md:flex-row`}
+        className={`${roboto.className} mt-14 flex w-full flex-col justify-between gap-14 pb-28 md:flex-row`}
       >
         <div className="flex flex-col gap-10 text-sm sm:px-[5vw] md:px-0 lg:w-72">
           <div className="flex flex-col gap-6">
@@ -127,7 +127,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex w-full flex-col flex-wrap justify-between gap-8 sm:flex-row sm:gap-5">
+        <div className="flex w-full flex-col flex-wrap justify-between gap-8 sm:flex-row lg:gap-9">
           {mappedProducts}
         </div>
       </div>

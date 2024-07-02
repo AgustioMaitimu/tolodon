@@ -13,7 +13,7 @@ function Hero() {
         PRINTS
       </h1>
       <p
-        className={`${roboto.className} text-xs leading-relaxed md:w-[70vw] md:text-sm lg:w-[55vw] xl:w-[30vw]`}
+        className={`${roboto.className} text-xs leading-relaxed md:w-[70vw] md:text-sm lg:w-[55vw] xl:w-[40vw]`}
       >
         We take pride in the quality of our products and use only the highest
         quality materials to ensure that each poster is durable and

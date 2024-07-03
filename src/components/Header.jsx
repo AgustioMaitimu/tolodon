@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Oswald, Roboto } from 'next/font/google';
 import Image from 'next/legacy/image';
 import Link from 'next/link';
@@ -15,13 +14,15 @@ export default function Header() {
         to get 15% off
       </h1>
       <div className="flex w-full max-w-[1280px] items-center justify-between px-7 py-[14px]">
-        <h1 className={`${oswald.className} text-lg`}>TOLODON</h1>
+        <Link href="/" className={`${oswald.className} text-lg xl:text-xl`}>
+          TOLODON
+        </Link>
         <div className="flex items-center gap-5">
           <div className="mr-5 hidden gap-7 font-thin md:flex">
-            <Link href="#">Home</Link>
-            <Link href="#">Blog</Link>
-            <Link href="#">About</Link>
-            <Link href="#">Contact</Link>
+            <Link href="/">Home</Link>
+            <Link href="/blog">Blog</Link>
+            <Link href="/about">About</Link>
+            <Link href="/contact">Contact</Link>
           </div>
           <div className="relative h-7 w-4 md:hidden">
             <Image

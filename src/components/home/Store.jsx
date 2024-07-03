@@ -131,7 +131,7 @@ function Store() {
           </h1>
           <div className="flex items-center gap-5">
             <input
-              className="aspect-square h-6 accent-white checked:bg-black"
+              className="aspect-square h-6 accent-black"
               type="checkbox"
               id="Black"
               name="Black"
@@ -144,7 +144,7 @@ function Store() {
           </div>
           <div className="flex items-center gap-5">
             <input
-              className="aspect-square h-6 accent-white"
+              className="aspect-square h-6 accent-black"
               type="checkbox"
               id="Brown"
               name="Brown"
@@ -157,7 +157,7 @@ function Store() {
           </div>
           <div className="flex items-center gap-5">
             <input
-              className="aspect-square h-6 accent-white"
+              className="aspect-square h-6 accent-black"
               type="checkbox"
               id="Teal"
               name="Teal"
@@ -170,7 +170,7 @@ function Store() {
           </div>
           <div className="flex items-center gap-5">
             <input
-              className="aspect-square h-6 accent-white"
+              className="aspect-square h-6 accent-black"
               type="checkbox"
               id="White"
               name="White"
@@ -186,7 +186,7 @@ function Store() {
           <h1 className={`${oswald.className} text-2xl`}>Size</h1>
           <div className="flex items-center gap-5">
             <input
-              className="aspect-square h-6 accent-white"
+              className="aspect-square h-6 accent-black"
               type="checkbox"
               id="8 ¼ x 11 ¾ in (21×30 cm)"
               name="8 ¼ x 11 ¾ in (21×30 cm)"
@@ -202,7 +202,7 @@ function Store() {
           </div>
           <div className="flex items-center gap-5">
             <input
-              className="aspect-square h-6 accent-white"
+              className="aspect-square h-6 accent-black"
               type="checkbox"
               id="11 ¾ x 15 ¾ in (30×40 cm)"
               name="11 ¾ x 15 ¾ in (30×40 cm)"
@@ -218,7 +218,7 @@ function Store() {
           </div>
           <div className="flex items-center gap-5">
             <input
-              className="aspect-square h-6 accent-white"
+              className="aspect-square h-6 accent-black"
               type="checkbox"
               id="15 ¾ x 19 ¾ in (40×50 cm)"
               name="15 ¾ x 19 ¾ in (40×50 cm)"
@@ -234,7 +234,7 @@ function Store() {
           </div>
           <div className="flex items-center gap-5">
             <input
-              className="aspect-square h-6 accent-white"
+              className="aspect-square h-6 accent-black"
               type="checkbox"
               id="19 ¾ x 27 ½ in (50×70 cm)"
               name="19 ¾ x 27 ½ in (50×70 cm)"

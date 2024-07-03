@@ -1,6 +1,7 @@
 import React from 'react';
 import { Oswald, Roboto } from 'next/font/google';
 import Image from 'next/legacy/image';
+import Link from 'next/link';
 const oswald = Oswald({ subsets: ['latin'] });
 const roboto = Roboto({ subsets: ['latin'], weight: '400' });
 
@@ -20,7 +21,7 @@ function Footer() {
           <div className="flex gap-5">
             <div className="relative aspect-square w-5">
               <Image
-                alt=""
+                alt="tumblr"
                 src="/tumblr.svg"
                 className="object-cover"
                 layout="fill"
@@ -28,7 +29,7 @@ function Footer() {
             </div>
             <div className="relative aspect-square w-5">
               <Image
-                alt=""
+                alt="instagram"
                 src="/instagram.svg"
                 className="object-cover"
                 layout="fill"
@@ -36,7 +37,7 @@ function Footer() {
             </div>
             <div className="relative aspect-square w-5">
               <Image
-                alt=""
+                alt="facebook"
                 src="/facebook.svg"
                 className="object-cover"
                 layout="fill"
@@ -44,7 +45,7 @@ function Footer() {
             </div>
             <div className="relative aspect-square w-5">
               <Image
-                alt=""
+                alt="twitter"
                 src="/twitter.svg"
                 className="object-cover"
                 layout="fill"
@@ -72,10 +73,10 @@ function Footer() {
         <div className="flex flex-col gap-7 text-white">
           <h1 className={`${oswald.className} text-xl`}>INFO</h1>
           <div className="flex flex-col gap-2 text-xs md:text-sm">
-            <div>Home</div>
-            <div>Blog</div>
-            <div>About</div>
-            <div>Contact</div>
+            <Link href="/">Home</Link>
+            <Link href="/blog">Blog</Link>
+            <Link href="/about">About</Link>
+            <Link href="/contact">Contact</Link>
           </div>
         </div>
       </div>

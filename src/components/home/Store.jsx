@@ -131,7 +131,7 @@ function Store() {
           </h1>
           <div className="flex items-center gap-5">
             <input
-              className="aspect-square h-6 accent-white"
+              className="aspect-square h-6 accent-white checked:bg-black"
               type="checkbox"
               id="Black"
               name="Black"

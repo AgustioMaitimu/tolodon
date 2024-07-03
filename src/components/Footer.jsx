@@ -1,5 +1,6 @@
 import React from 'react';
 import { Oswald, Roboto } from 'next/font/google';
+import Image from 'next/legacy/image';
 const oswald = Oswald({ subsets: ['latin'] });
 const roboto = Roboto({ subsets: ['latin'], weight: '400' });
 
@@ -17,10 +18,38 @@ function Footer() {
             and we believe in diversity, value and quality.
           </p>
           <div className="flex gap-5">
-            <div className="relative aspect-square w-5 rounded bg-white"></div>
-            <div className="relative aspect-square w-5 rounded bg-white"></div>
-            <div className="relative aspect-square w-5 rounded bg-white"></div>
-            <div className="relative aspect-square w-5 rounded bg-white"></div>
+            <div className="relative aspect-square w-5">
+              <Image
+                alt=""
+                src="/tumblr.svg"
+                className="object-cover"
+                layout="fill"
+              ></Image>
+            </div>
+            <div className="relative aspect-square w-5">
+              <Image
+                alt=""
+                src="/instagram.svg"
+                className="object-cover"
+                layout="fill"
+              ></Image>
+            </div>
+            <div className="relative aspect-square w-5">
+              <Image
+                alt=""
+                src="/facebook.svg"
+                className="object-cover"
+                layout="fill"
+              ></Image>
+            </div>
+            <div className="relative aspect-square w-5">
+              <Image
+                alt=""
+                src="/twitter.svg"
+                className="object-cover"
+                layout="fill"
+              ></Image>
+            </div>
           </div>
         </div>
         <div className="flex flex-col gap-7 text-white md:max-w-[20vw]">

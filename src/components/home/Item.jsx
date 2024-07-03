@@ -21,7 +21,7 @@ function Item({
     >
       <div className="relative mb-3 aspect-square w-full">
         <Image
-          alt="Product image"
+          alt={`${name} image`}
           src={image}
           layout="fill"
           className="object-cover"

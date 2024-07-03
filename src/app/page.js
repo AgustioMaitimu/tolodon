@@ -1,5 +1,3 @@
-'use client';
-
 import Hero from '@/components/home/Hero';
 import Store from '@/components/home/Store';
 import { Oswald, Roboto } from 'next/font/google';

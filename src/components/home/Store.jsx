@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Item from '@/components/home/Item';
 import { Oswald, Roboto } from 'next/font/google';

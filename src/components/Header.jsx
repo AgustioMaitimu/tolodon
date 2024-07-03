@@ -24,14 +24,14 @@ export default function Header() {
             <Link href="/about">About</Link>
             <Link href="/contact">Contact</Link>
           </div>
-          <div className="relative h-7 w-4 md:hidden">
+          <Link href="/menu" className="relative h-7 w-4 md:hidden">
             <Image
               alt=""
               src="/menu.svg"
               layout="fill"
               className="object-cover"
             />
-          </div>
+          </Link>
           <div className="relative h-5 w-5">
             <Image
               alt=""

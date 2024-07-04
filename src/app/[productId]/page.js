@@ -25,8 +25,8 @@ function Product() {
           </Link>{' '}
           / {productDetails.name}
         </p>
-        <div className="flex flex-col gap-10 tab:flex-row tab:justify-evenly tab:gap-0">
-          <div className="relative aspect-square w-full tab:w-[50vw]">
+        <div className="flex flex-col gap-10 tab:flex-row tab:justify-start tab:gap-0">
+          <div className="relative aspect-square w-full tab:mr-7 tab:w-[55%] xl:w-[45%]">
             <Image
               alt={`${productDetails.name} image`}
               src={productDetails.image}
@@ -34,11 +34,11 @@ function Product() {
               className="object-cover"
             />
           </div>
-          <div className="flex flex-col gap-7 tab:w-[30vw]">
-            <h1 className={`${oswald.className} text-2xl`}>
+          <div className="flex flex-col gap-7 tab:w-[40%] xl:w-[53%]">
+            <h1 className={`${oswald.className} text-2xl tab:text-3xl`}>
               {productDetails.name}
             </h1>
-            <div className="flex gap-1 text-lg">
+            <div className="flex gap-1 text-lg text-[#3B3B3B] tab:text-xl">
               {productDetails.hasDiscount && (
                 <p className="line-through">${productDetails.realPrice}0</p>
               )}
@@ -49,16 +49,18 @@ function Product() {
                 <p>${productDetails.realPrice}0</p>
               )}
             </div>
-            <p className="text-[15.1px]">{productDetails.description}</p>
-            <div className="flex gap-10">
+            <p className="text-[15.1px] text-[#3B3B3B] tab:text-lg">
+              {productDetails.description}
+            </p>
+            <div className="flex gap-4">
               <input
                 type="number"
-                className="h-14 rounded border-[1px] border-black px-5 text-center text-base"
+                className="h-12 rounded border-[1px] border-black px-6 text-center text-base"
                 defaultValue={1}
                 min={1}
                 max={10}
               />
-              <button className="h-14 w-36 rounded bg-black text-center text-base text-white">
+              <button className="h-12 w-36 rounded bg-black text-center text-base text-white">
                 Add To Cart
               </button>
             </div>

@@ -4,18 +4,17 @@ const oswald = Oswald({ subsets: ['latin'] });
 const roboto = Roboto({ subsets: ['latin'], weight: '400' });
 import Link from 'next/link';
 
-function Blog() {
+function About() {
   return (
     <div
       className={`${roboto.className} mb-20 mt-14 flex w-full max-w-[650px] flex-col items-center gap-16 px-7`}
     >
       <div className="flex flex-col gap-6 ">
-        <Link
-          href="/blog/1"
-          className={`${oswald.className} text-2xl decoration-2 hover:underline xl:text-3xl`}
+        <div
+          className={`${oswald.className} text-2xl decoration-2 xl:text-3xl`}
         >
           About
-        </Link>
+        </div>
         <p className="text-[#3B3B3B] xl:text-lg">
           Our shop specializes in creating and selling unique and eye-catching
           geometric posters that are perfect for adding a touch of modern style
@@ -35,4 +34,4 @@ function Blog() {
   );
 }
 
-export default Blog;
+export default About;

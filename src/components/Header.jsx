@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { Oswald, Roboto } from 'next/font/google';
 import Image from 'next/legacy/image';
@@ -24,7 +26,11 @@ export default function Header() {
             <Link href="/about">About</Link>
             <Link href="/contact">Contact</Link>
           </div>
-          <Link href="/menu" className="relative h-7 w-4 md:hidden">
+          <Link
+            href="/menu"
+            scroll={false}
+            className="relative h-7 w-4 md:hidden"
+          >
             <Image
               alt=""
               src="/menu.svg"

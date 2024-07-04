@@ -55,6 +55,7 @@ function Store() {
       return (
         <Item
           name={x.name}
+          productId={x.productId}
           realPrice={x.realPrice}
           hasDiscount={x.hasDiscount}
           discountPrice={x.discountPrice}
@@ -252,7 +253,7 @@ function Store() {
           </div>
         </div>
       </div>
-      <div className="flex w-full flex-col flex-wrap justify-start gap-8 sm:flex-row lg:gap-9">
+      <div className="flex w-full flex-col flex-wrap justify-start gap-6 sm:flex-row lg:gap-9">
         {displayedProducts}
       </div>
     </div>

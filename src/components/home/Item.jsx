@@ -1,5 +1,6 @@
 import { Oswald, Roboto } from 'next/font/google';
 import Image from 'next/legacy/image';
+import Link from 'next/link';
 import React from 'react';
 
 const oswald = Oswald({ subsets: ['latin'] });
@@ -10,13 +11,15 @@ function Item({
   realPrice,
   hasDiscount,
   discountPrice,
+  productId,
   description,
   colors,
   size,
   image,
 }) {
   return (
-    <div
+    <Link
+      href={`/${productId}`}
       className={`${roboto.className} flex w-full flex-col text-sm sm:w-[30%] 2xl:text-base`}
     >
       <div className="relative mb-3 aspect-square w-full">
@@ -33,7 +36,7 @@ function Item({
         {hasDiscount && <p>${discountPrice}0</p>}
         {!hasDiscount && <p>${realPrice}0</p>}
       </div>
-    </div>
+    </Link>
   );
 }
 

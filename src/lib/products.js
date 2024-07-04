@@ -2,9 +2,10 @@
 const products = [
   {
     name: 'Suspended',
-    realPrice: 49.90,
+    productId: 298594,
+    realPrice: 49.9,
     hasDiscount: true,
-    discountPrice: 39.90,
+    discountPrice: 39.9,
     description:
       'Suspended is a dynamic geometric poster featuring intersecting lines and shapes in a bold color scheme, creating a striking visual impact.',
     colors: ['Black', 'Brown'],
@@ -13,9 +14,10 @@ const products = [
   },
   {
     name: 'Pathways',
-    realPrice: 49.90,
+    productId: 108013,
+    realPrice: 49.9,
     hasDiscount: true,
-    discountPrice: 39.90,
+    discountPrice: 39.9,
     description:
       'Pathways is a dynamic geometric poster featuring intersecting lines and shapes in a bold color scheme, creating a striking visual impact.',
     colors: ['Brown'],
@@ -24,7 +26,8 @@ const products = [
   },
   {
     name: 'Dreamstate No.4',
-    realPrice: 49.90,
+    productId: 540201,
+    realPrice: 49.9,
     hasDiscount: false,
     description:
       'Dreamstate No.4 is a dynamic geometric poster featuring intersecting lines and shapes in a bold color scheme, creating a striking visual impact.',
@@ -34,7 +37,8 @@ const products = [
   },
   {
     name: 'Time Went by',
-    realPrice: 39.90,
+    productId: 127208,
+    realPrice: 39.9,
     hasDiscount: false,
     description:
       'Time Went by is a dynamic geometric poster featuring intersecting lines and shapes in a bold color scheme, creating a striking visual impact.',
@@ -44,7 +48,8 @@ const products = [
   },
   {
     name: 'Step by Step',
-    realPrice: 59.90,
+    productId: 252900,
+    realPrice: 59.9,
     hasDiscount: false,
     description:
       'Step by Step is a dynamic geometric poster featuring intersecting lines and shapes in a bold color scheme, creating a striking visual impact.',
@@ -54,7 +59,8 @@ const products = [
   },
   {
     name: 'Mezhi',
-    realPrice: 39.90,
+    productId: 148053,
+    realPrice: 39.9,
     hasDiscount: false,
     description:
       'Mezhi is a dynamic geometric poster featuring intersecting lines and shapes in a bold color scheme, creating a striking visual impact.',

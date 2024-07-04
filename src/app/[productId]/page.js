@@ -25,8 +25,8 @@ function Product() {
           </Link>{' '}
           / {productDetails.name}
         </p>
-        <div className="tab:flex-row tab:gap-0 tab:justify-evenly flex flex-col gap-10">
-          <div className="tab:w-[50vw] relative aspect-square w-full">
+        <div className="flex flex-col gap-10 tab:flex-row tab:justify-evenly tab:gap-0">
+          <div className="relative aspect-square w-full tab:w-[50vw]">
             <Image
               alt={`${productDetails.name} image`}
               src={productDetails.image}
@@ -34,7 +34,7 @@ function Product() {
               className="object-cover"
             />
           </div>
-          <div className="tab:w-[30vw] flex flex-col gap-7">
+          <div className="flex flex-col gap-7 tab:w-[30vw]">
             <h1 className={`${oswald.className} text-2xl`}>
               {productDetails.name}
             </h1>

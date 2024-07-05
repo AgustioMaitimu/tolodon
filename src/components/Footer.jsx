@@ -19,7 +19,7 @@ function Footer() {
             and we believe in diversity, value and quality.
           </p>
           <div className="flex gap-5">
-            <div className="relative aspect-square w-5">
+            <div className="relative aspect-square w-5 cursor-pointer ">
               <Image
                 alt="tumblr"
                 src="/tumblr.svg"
@@ -27,7 +27,7 @@ function Footer() {
                 layout="fill"
               ></Image>
             </div>
-            <div className="relative aspect-square w-5">
+            <div className="relative aspect-square w-5 cursor-pointer ">
               <Image
                 alt="instagram"
                 src="/instagram.svg"
@@ -35,7 +35,7 @@ function Footer() {
                 layout="fill"
               ></Image>
             </div>
-            <div className="relative aspect-square w-5">
+            <div className="relative aspect-square w-5 cursor-pointer ">
               <Image
                 alt="facebook"
                 src="/facebook.svg"
@@ -43,7 +43,7 @@ function Footer() {
                 layout="fill"
               ></Image>
             </div>
-            <div className="relative aspect-square w-5">
+            <div className="relative aspect-square w-5 cursor-pointer ">
               <Image
                 alt="twitter"
                 src="/twitter.svg"
@@ -65,9 +65,9 @@ function Footer() {
         <div className="flex flex-col gap-7 text-white md:max-w-[15vw]">
           <h1 className={`${oswald.className} text-xl`}>SHOP</h1>
           <div className="flex flex-col gap-2 text-xs md:text-sm">
-            <div>My Account</div>
-            <div>Privacy Policy</div>
-            <div>Refunds and Returns policy</div>
+            <div className="cursor-pointer">My Account</div>
+            <div className="cursor-pointer">Privacy Policy</div>
+            <div className="cursor-pointer">Refunds and Returns policy</div>
           </div>
         </div>
         <div className="flex flex-col gap-7 text-white">

@@ -38,15 +38,15 @@ export default function Header() {
               className="object-cover"
             />
           </Link>
-          <div className="relative h-5 w-5">
+          <Link href="/account" className="relative h-5 w-5">
             <Image
               alt=""
               src="/profile.svg"
               layout="fill"
               className="object-cover"
             />
-          </div>
-          <div className="relative h-6 w-6">
+          </Link>
+          <div className="relative h-6 w-6 cursor-pointer">
             <Image
               alt=""
               src="/cart.svg"

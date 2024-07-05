@@ -2,7 +2,6 @@ import React from 'react';
 import { Oswald, Roboto } from 'next/font/google';
 const oswald = Oswald({ subsets: ['latin'] });
 const roboto = Roboto({ subsets: ['latin'], weight: '400' });
-import Link from 'next/link';
 
 function About() {
   return (

@@ -65,7 +65,9 @@ function Footer() {
         <div className="flex flex-col gap-7 text-white md:max-w-[15vw]">
           <h1 className={`${oswald.className} text-xl`}>SHOP</h1>
           <div className="flex flex-col gap-2 text-xs md:text-sm">
-            <div className="cursor-pointer">My Account</div>
+            <Link href="/account" className="cursor-pointer">
+              My Account
+            </Link>
             <div className="cursor-pointer">Privacy Policy</div>
             <div className="cursor-pointer">Refunds and Returns policy</div>
           </div>

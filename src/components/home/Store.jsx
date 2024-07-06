@@ -46,11 +46,6 @@ function Store() {
       }
     });
 
-    setColorCounts(colorCounter);
-    setSizeCounts(sizeCounter);
-  }, [filteredProducts]);
-
-  useEffect(() => {
     const mapped = filteredProducts.map((x, index) => {
       return (
         <Item
@@ -67,7 +62,10 @@ function Store() {
         />
       );
     });
+
     setDisplayedProducts(mapped);
+    setColorCounts(colorCounter);
+    setSizeCounts(sizeCounter);
   }, [filteredProducts]);
 
   useEffect(() => {
@@ -90,35 +88,15 @@ function Store() {
     }
   }, [filters]);
 
-  function handleColorChange(event) {
-    const color = event.target.value;
-    if (event.target.checked) {
-      setFilters((prev) => ({
-        ...prev,
-        colors: [...prev.colors, color],
-      }));
-    } else {
-      setFilters((prev) => ({
-        ...prev,
-        colors: prev.colors.filter((c) => c !== color),
-      }));
-    }
-  }
-
-  function handleSizeChange(event) {
-    const size = event.target.value;
-    if (event.target.checked) {
-      setFilters((prev) => ({
-        ...prev,
-        sizes: [...prev.sizes, size],
-      }));
-    } else {
-      setFilters((prev) => ({
-        ...prev,
-        sizes: prev.sizes.filter((s) => s !== size),
-      }));
-    }
-  }
+  const handleFilterChange = (event, filterType) => {
+    const value = event.target.value;
+    setFilters((prev) => ({
+      ...prev,
+      [filterType]: event.target.checked
+        ? [...prev[filterType], value]
+        : prev[filterType].filter((v) => v !== value),
+    }));
+  };
 
   return (
     <div
@@ -132,128 +110,47 @@ function Store() {
           >
             Color
           </h1>
-          <div className="flex items-center gap-5">
-            <input
-              className="aspect-square h-6 accent-black"
-              type="checkbox"
-              id="Black"
-              name="Black"
-              value="Black"
-              onChange={handleColorChange}
-            />
-            <label htmlFor="Black">
-              Black <span className="ml-[2px]">({colorCounts.Black})</span>
-            </label>
-          </div>
-          <div className="flex items-center gap-5">
-            <input
-              className="aspect-square h-6 accent-black"
-              type="checkbox"
-              id="Brown"
-              name="Brown"
-              value="Brown"
-              onChange={handleColorChange}
-            />
-            <label htmlFor="Brown">
-              Brown <span className="ml-[2px]">({colorCounts.Brown})</span>
-            </label>
-          </div>
-          <div className="flex items-center gap-5">
-            <input
-              className="aspect-square h-6 accent-black"
-              type="checkbox"
-              id="Teal"
-              name="Teal"
-              value="Teal"
-              onChange={handleColorChange}
-            />
-            <label htmlFor="Teal">
-              Teal <span className="ml-[2px]">({colorCounts.Teal})</span>
-            </label>
-          </div>
-          <div className="flex items-center gap-5">
-            <input
-              className="aspect-square h-6 accent-black"
-              type="checkbox"
-              id="White"
-              name="White"
-              value="White"
-              onChange={handleColorChange}
-            />
-            <label htmlFor="White">
-              White <span className="ml-[2px]">({colorCounts.White})</span>
-            </label>
-          </div>
+          {['Black', 'Brown', 'Teal', 'White'].map((color, index) => (
+            <div key={index} className="flex items-center gap-5">
+              <input
+                className="aspect-square h-6 accent-black"
+                type="checkbox"
+                id={color}
+                name={color}
+                value={color}
+                onChange={(e) => handleFilterChange(e, 'colors')}
+              />
+              <label htmlFor={color}>
+                {color} <span className="ml-[2px]">({colorCounts[color]})</span>
+              </label>
+            </div>
+          ))}
         </div>
         <div className="flex flex-col gap-6">
           <h1 className={`${oswald.className} text-2xl`}>Size</h1>
-          <div className="flex items-center gap-5">
-            <input
-              className="aspect-square h-6 accent-black"
-              type="checkbox"
-              id="8 ¼ x 11 ¾ in (21×30 cm)"
-              name="8 ¼ x 11 ¾ in (21×30 cm)"
-              value="8 ¼ x 11 ¾ in (21×30 cm)"
-              onChange={handleSizeChange}
-            />
-            <label htmlFor="8 ¼ x 11 ¾ in (21×30 cm)">
-              8 ¼ x 11 ¾ in (21×30 cm){' '}
-              <span className="ml-[3px]">
-                ({sizeCounts['8 ¼ x 11 ¾ in (21×30 cm)']})
-              </span>
-            </label>
-          </div>
-          <div className="flex items-center gap-5">
-            <input
-              className="aspect-square h-6 accent-black"
-              type="checkbox"
-              id="11 ¾ x 15 ¾ in (30×40 cm)"
-              name="11 ¾ x 15 ¾ in (30×40 cm)"
-              value="11 ¾ x 15 ¾ in (30×40 cm)"
-              onChange={handleSizeChange}
-            />
-            <label htmlFor="11 ¾ x 15 ¾ in (30×40 cm)">
-              11 ¾ x 15 ¾ in (30×40 cm)
-              <span className="ml-[6px]">
-                ({sizeCounts['11 ¾ x 15 ¾ in (30×40 cm)']})
-              </span>
-            </label>
-          </div>
-          <div className="flex items-center gap-5">
-            <input
-              className="aspect-square h-6 accent-black"
-              type="checkbox"
-              id="15 ¾ x 19 ¾ in (40×50 cm)"
-              name="15 ¾ x 19 ¾ in (40×50 cm)"
-              value="15 ¾ x 19 ¾ in (40×50 cm)"
-              onChange={handleSizeChange}
-            />
-            <label htmlFor="15 ¾ x 19 ¾ in (40×50 cm)">
-              15 ¾ x 19 ¾ in (40×50 cm)
-              <span className="ml-[6px]">
-                ({sizeCounts['15 ¾ x 19 ¾ in (40×50 cm)']})
-              </span>
-            </label>
-          </div>
-          <div className="flex items-center gap-5">
-            <input
-              className="aspect-square h-6 accent-black"
-              type="checkbox"
-              id="19 ¾ x 27 ½ in (50×70 cm)"
-              name="19 ¾ x 27 ½ in (50×70 cm)"
-              value="19 ¾ x 27 ½ in (50×70 cm)"
-              onChange={handleSizeChange}
-            />
-            <label htmlFor="19 ¾ x 27 ½ in (50×70 cm)">
-              19 ¾ x 27 ½ in (50×70 cm)
-              <span className="ml-[6px]">
-                ({sizeCounts['19 ¾ x 27 ½ in (50×70 cm)']})
-              </span>
-            </label>
-          </div>
+          {[
+            '8 ¼ x 11 ¾ in (21×30 cm)',
+            '11 ¾ x 15 ¾ in (30×40 cm)',
+            '15 ¾ x 19 ¾ in (40×50 cm)',
+            '19 ¾ x 27 ½ in (50×70 cm)',
+          ].map((size, index) => (
+            <div key={index} className="flex items-center gap-5">
+              <input
+                className="aspect-square h-6 accent-black"
+                type="checkbox"
+                id={size}
+                name={size}
+                value={size}
+                onChange={(e) => handleFilterChange(e, 'sizes')}
+              />
+              <label htmlFor={size}>
+                {size} <span className="ml-[2px]">({sizeCounts[size]})</span>
+              </label>
+            </div>
+          ))}
         </div>
       </div>
-      <div className="flex w-full flex-col flex-wrap justify-start gap-6 sm:flex-row lg:gap-9">
+      <div className="flex w-full flex-col flex-wrap justify-start gap-1 sm:flex-row lg:gap-9">
         {displayedProducts}
       </div>
     </div>
